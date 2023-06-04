@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Stardos+Stencil&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+
+:root{
+    --backgroundcolor:white;
+    --primaryfont:'Stardos Stencil', cursive;
+    --primaryfontcolor:rgba(46, 43, 43, 0.849);
+    --sidebarbg:rgba(145, 141, 141, 0.836);
+    --sidebarbgbtn:#3333339a;
+    --moodbtncolor:rgb(85, 82, 82);
+    --hovercolor:#807878;
+}
+/* darkmood color */
+.magic{
+    --backgroundcolor:rgba(36, 34, 34, 0.918);
+    --hovercolor:#333;
+    --primaryfontcolor:rgba(255, 255, 255, 0.699);
+    --sidebarbg:rgb(63, 63, 63);
+    --sidebarbgbtn:#dadada;
+    --moodbtncolor:rgb(255, 255, 255);
+}
+/* darkmood color */
+
+/* DEFAULT CSS STARTS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    height: 100vh;
+    font-family: var(--primaryfont);
+    position: relative;
+    background-color: var(--backgroundcolor);
+}
+
+/* DEFAULT CSS ENDS */
+
+
+.password{
+    position: absolute;
+    top: 220px;
+    left: 630px;
+}
+.password input{
+    width: 250px;
+    padding: 15px 20px;
+    border-radius: 22px;
+}
+.password .look{
+    position: absolute;
+    top: 79px;
+    left: 210px;
+}
+.password .look .lookbutton{
+    font-size: 18px;
+    background: transparent;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+.password .submit{
+    margin-left: 95px;
+    background-color: var(--sidebarbgbtn);
+    border-radius: 18px;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+/* SIDE BAR STARTS */
+
+
+nav aside{
+    width: 20%;
+}
+nav .mood{
+    width: 80%;
+    text-align: center;
+}
+nav aside{
+    background-color:var(--sidebarbg) ;
+    background-image: blur(8px);
+    min-height: calc(100vh - 10px);
+    width: 100%;
+    max-width: 300px;
+    margin: 5px 5px;
+    border-radius: 20px;
+    color: var(--moodbtncolor);
+    position: relative;
+    transform: translateX(-102%);
+    transition: 0.35s;
+    
+}
+aside.active{
+    transform: translateX(0%);
+}
+.sidebtn{
+    position: relative;
+}
+.sidebtn .sidebar{
+    position: absolute;
+    left: 5px;
+    top: 30px;
+    border-radius: 12px;
+    background-color: var(--sidebarbgbtn);
+    color: var(--primaryfontcolor);
+    z-index: 1;
+    font-size: 1.5rem;
+    padding: 5px 3px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* profile */
+
+aside .profile{
+    /* background-color: rgb(54, 71, 87); */
+    padding: 15px;
+}
+aside .profile .profileIMG{
+    width: 40%;
+    text-align: center;
+}
+aside .profile .profileIMG img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 3px solid rgb(11, 187, 11);
+}
+aside .profile .profiletext{
+    width: 60%;
+}
+
+
+/* profile */
+
+/* menu */
+.menu ul li a {
+    display: block;
+    font-size: 20px;
+    color: var(--primaryfontcolor);
+    padding: 12px 30px;
+    position: relative;
+    transition: 0.15s ease;
+  }
+  
+  .menu ul li a > span {
+    margin-right: 50px;
+    display: inline-block;
+  }
+  
+  .menu ul li a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background-color: rgb(11, 187, 11);
+    border-radius: 0 8px 8px 0;
+  }
+  
+  .menu ul li a:hover,
+  .menu ul li a.select {
+    background-color: var(--hovercolor);
+  }
+  
+  .menu ul li a:hover::after,
+  .menu ul li a.select::after {
+    width: 4px;
+  }
+  
+  .menu ul li a span img {
+    width: 1.6rem;
+  }
+/* menu */
+
+aside hr{
+    opacity: 0.3;
+}
+
+/* recent */
+
+.recent{
+    padding: 10px 15px;
+}
+.recent h3{
+    color: var(--primaryfontcolor);
+}
+.recent .arrow{
+    position: relative;
+}
+.recent .arrow img{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+}
+
+.recentProfile .recentIMG{
+    width: 35%;
+    padding: 5px 0px;
+}
+.recentProfile .recentIMG img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 4px solid rgba(42, 71, 196, 0.877);
+}
+.recentProfile{
+    cursor: pointer;
+    transition: 0.4s;
+}
+.recentProfile:hover {
+    transform: scale(0.8);
+}
+.recentProfile .recenttext{
+    width: 75%;
+}
+.recentProfile .recenttext h3{
+    color: var(--primaryfontcolor);
+}
+
+/* recent */
+
+/* SIDE BAR ENDS */
+
+/* DARK MOOD STARTS */
+
+.mood{
+    position: relative;
+}
+.moodA{
+    right:80px ;
+    top: -315px;
+    position: absolute;
+}
+.mood button{
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    line-height: 30px;
+    overflow: hidden;
+}
+.mood button span{
+    display: block;
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: 2px solid yellow;
+    border-radius: 50%;
+    transition: 0.45s;
+}
+.mood button .light{
+    color: var(--moodbtncolor);
+}
+.mood button  .moon{
+    color: var(--moodbtncolor);
+}
+
+.mood .moodtext{
+    margin: 0px 5px;
+    color: var(--primaryfontcolor);
+}
+/* .mood button:hover .light{
+    margin-top: -30px;
+} */
+
+/* DARK MOOD ENDS */
